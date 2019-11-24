@@ -1,0 +1,116 @@
+<html>
+<!-- 
+11/06/2018
+v 1.5 
+   new - include semicolon used for generating list to feed to RWS White/Blaclisting job.
+   new - copy to clipboard automatically if supported. 
+v 1.6
+   new - remove extra carriage returns.
+v 1.7
+   Make text Areas smaller so banner does not overlap buttons
+v 1.8
+   Added message notifying the user that output has been copied to clipboard 
+v 1.8
+   Redone front end with bootstrap
+v 1.9 
+  Fix to remove injected logo from host, sometimes that logo covers buttons so user cant press buttons
+v 1.10
+  Move into appjs file
+-->
+
+<head>
+
+
+<!-- <style>
+.container {
+   display: flex; 
+   justify-content: center;
+}
+
+.center {
+   width: 800px;
+ }
+
+body {
+   background-color: black;
+   color: #49fb35;
+}
+
+.inline {
+   display:inline-block;
+   margin-right:30px;
+}
+
+textarea {
+    resize: none;
+}
+
+.Message {
+
+	background-color: green;
+}
+</style>  -->
+
+<style type="text/css">
+  textarea.form-control {
+  height: 100%;
+}
+
+</style>
+<script src="app110.js"></script>
+
+  <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+</head>
+<body style="background-color: black; color: #49fb35">
+
+<div class="container">
+	
+
+	<div class="row justify-content-md-center">	  
+		<h2>Moe's Comma Tool</h2>
+    </div>
+
+    <div class="Message">
+	  <center><h2>Output copied to clipboard</h2></center>
+    </div>
+
+  <div class="row pt-3">
+    <div class="col ml-4">
+      <div class="form-group">
+        <textarea class="form-control textarea-fixed-height row justify-content-center" rows="30" cols="50" id="upc"></textarea>	
+      </div>  
+    </div>
+    <div class="col">
+      <div class="form-group">	
+      	<textarea class="form-control textarea-fixed-height row justify-content-center" rows="30" cols="50" id="out"></textarea>
+      </div>  
+    </div>
+  </div>
+
+   <div class="row">
+	   <div class="col text-center mt-3">
+	   	 <div class="form-group">	
+		    <input type="button" onclick="AddComma(',')" value="Comma" class="inline">
+			<input type="button" onclick="StringQuote()" value="String & Quote" class="inline">
+			<input type="button" onclick="Clear(0)" value="Clear Both" class="inline">
+			<input type="button" onclick="Clear(1)" value="Clear Left" class="inline">
+			<input type="button" onclick="Clear(2)" value="Clear Right" class="inline">
+			<input type="button" onclick="AddComma(';')" value="SemiColon" class="inline">
+			<!-- <input type="checkbox" value="CopyToClipBoard" name="Copy2Clip" onclick="CheckClipBoardCopySupported()"><label>Copy Results To Clipboard</label> -->
+		   </div>  
+	    </div>
+  </div>
+
+</div>
+
+<script>
+</script>
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
