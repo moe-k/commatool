@@ -33,3 +33,5 @@ You can take that list and dump it into this quick tool then generate either a q
  without any carriage returns.
  
  This tool automatically copies the items to the clipboard if your browser allows that so you can easy cut and paste.
+ 
+ To install copy both ommaToolV110.html and app110.js to a folder on your computer or upload to a web server for use.
